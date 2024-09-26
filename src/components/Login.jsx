@@ -101,9 +101,9 @@ function Login() {
     <>
        <Header/>
       <div className='absolute'>
-       <img src={BG_URL} alt="logo-login" />
+       <img className='h-screen object-cover md:w-screen' src={BG_URL} alt="logo-login" />
        </div>
-    <form onSubmit={(e)=>e.preventDefault()} className='w-3/12 absolute my-36  mx-auto right-0 left-0 bg-black p-12 text-white rounded-lg bg-opacity-80'>
+    <form onSubmit={(e)=>e.preventDefault()} className='w-full md:w-3/12 absolute my-36  mx-auto right-0 left-0 bg-black p-12 text-white rounded-lg bg-opacity-80'>
     <h1 className='font-bold text-3xl py-4'>{isSignInForm?"Sign In" : "Sign Up"}</h1>
        {!isSignInForm && (<input  ref={name} type="text" placeholder='Full Name' className='p-2 my-4 w-full bg-gray-700' />)} 
        {!isSignInForm && (<input ref={Phno} type="number" placeholder='Enter Phone Number' className='p-2 my-4 w-full bg-gray-700' />)}

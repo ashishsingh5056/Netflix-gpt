@@ -64,7 +64,7 @@ dispatch(changeLanguage(e.target.value));
     <>
     <div className=' w-screen absolute px-7 py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between '>
     <img className='w-44 mx-auto md:mx-0' src= {Logo} alt='logo'/>
-    {user && (<div className='flex p-2 '>
+    {user && (<div className='flex justify-between p-2 '>
       {showGptSearch &&<select className='p-1 bg-gray-800 m-2 rounded-lg text-white' onChange={handleLanguageChange}>
         {SUPPORTED_LANGUAGES.map((lang)=>(
            <option key={lang.identifier} value={lang.identifier}>{lang.name}</option>
@@ -74,7 +74,7 @@ dispatch(changeLanguage(e.target.value));
         <option value="spanish">Spanish</option> */}
       </select>}
       <button className='py-2 px-4 mx-2 my-3 bg-purple-800 text-white rounded-lg' onClick={handleGptSearchClick}>{showGptSearch ? "HomePage" :"GPT Search"}</button>
-        <img className='w-12 h-12' alt='userlogo'  src={user?.photoURL} />
+        <img className='hidden md:block w-12 h-12' alt='userlogo'  src={user?.photoURL} />
         <button onClick={handleSignOut} className='font-bold text-white'>Sign Out</button> 
         
 
